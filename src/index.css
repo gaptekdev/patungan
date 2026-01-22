@@ -1,141 +1,145 @@
+/* Patungan - Split Bill App Design System */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Patungan - Split Bill App Design System */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
 @layer base {
-  :root {
-    /* Clean, neutral base */
-    --background: 40 20% 98%;
-    --foreground: 220 20% 15%;
+    :root {
+        /* Clean, neutral base */
+        --background: 40 20% 98%;
+        --foreground: 220 20% 15%;
 
-    /* Card surfaces */
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+        /* Card surfaces */
+        --card: 0 0% 100%;
+        --card-foreground: 220 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 220 20% 15%;
 
-    /* Teal accent - trustworthy & fresh */
-    --primary: 168 60% 42%;
-    --primary-foreground: 0 0% 100%;
+        /* Teal accent - trustworthy & fresh */
+        --primary: 168 60% 42%;
+        --primary-foreground: 0 0% 100%;
 
-    /* Soft secondary */
-    --secondary: 40 15% 94%;
-    --secondary-foreground: 220 15% 30%;
+        /* Soft secondary */
+        --secondary: 40 15% 94%;
+        --secondary-foreground: 220 15% 30%;
 
-    /* Muted tones */
-    --muted: 40 10% 92%;
-    --muted-foreground: 220 10% 50%;
+        /* Muted tones */
+        --muted: 40 10% 92%;
+        --muted-foreground: 220 10% 50%;
 
-    /* Accent highlight */
-    --accent: 168 50% 95%;
-    --accent-foreground: 168 60% 30%;
+        /* Accent highlight */
+        --accent: 168 50% 95%;
+        --accent-foreground: 168 60% 30%;
 
-    /* Destructive */
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+        /* Destructive */
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 100%;
 
-    /* Borders & inputs */
-    --border: 40 15% 88%;
-    --input: 40 15% 92%;
-    --ring: 168 60% 42%;
+        /* Borders & inputs */
+        --border: 40 15% 88%;
+        --input: 40 15% 92%;
+        --ring: 168 60% 42%;
 
-    --radius: 0.75rem;
+        --radius: 0.75rem;
 
-    /* Custom tokens */
-    --shadow-soft: 0 2px 8px -2px hsl(220 20% 15% / 0.08);
-    --shadow-card: 0 4px 20px -4px hsl(220 20% 15% / 0.1);
-    --gradient-subtle: linear-gradient(135deg, hsl(40 20% 98%), hsl(168 30% 97%));
-  }
+        /* Custom tokens */
+        --shadow-soft: 0 2px 8px -2px hsl(220 20% 15% / 0.08);
+        --shadow-card: 0 4px 20px -4px hsl(220 20% 15% / 0.1);
+        --gradient-subtle: linear-gradient(
+            135deg,
+            hsl(40 20% 98%),
+            hsl(168 30% 97%)
+        );
+    }
 
-  .dark {
-    --background: 220 20% 10%;
-    --foreground: 40 15% 95%;
+    .dark {
+        --background: 220 20% 10%;
+        --foreground: 40 15% 95%;
 
-    --card: 220 18% 13%;
-    --card-foreground: 40 15% 95%;
+        --card: 220 18% 13%;
+        --card-foreground: 40 15% 95%;
 
-    --popover: 220 18% 13%;
-    --popover-foreground: 40 15% 95%;
+        --popover: 220 18% 13%;
+        --popover-foreground: 40 15% 95%;
 
-    --primary: 168 55% 48%;
-    --primary-foreground: 220 20% 10%;
+        --primary: 168 55% 48%;
+        --primary-foreground: 220 20% 10%;
 
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 40 10% 85%;
+        --secondary: 220 15% 18%;
+        --secondary-foreground: 40 10% 85%;
 
-    --muted: 220 12% 20%;
-    --muted-foreground: 40 8% 60%;
+        --muted: 220 12% 20%;
+        --muted-foreground: 40 8% 60%;
 
-    --accent: 168 40% 18%;
-    --accent-foreground: 168 50% 75%;
+        --accent: 168 40% 18%;
+        --accent-foreground: 168 50% 75%;
 
-    --destructive: 0 65% 45%;
-    --destructive-foreground: 0 0% 100%;
+        --destructive: 0 65% 45%;
+        --destructive-foreground: 0 0% 100%;
 
-    --border: 220 12% 22%;
-    --input: 220 12% 22%;
-    --ring: 168 55% 48%;
-  }
+        --border: 220 12% 22%;
+        --input: 220 12% 22%;
+        --ring: 168 55% 48%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+    * {
+        @apply border-border;
+    }
 
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-  }
-
-  /* Print styles */
-  @media print {
     body {
-      background: white !important;
+        @apply bg-background text-foreground font-sans antialiased;
+        font-family: "Plus Jakarta Sans", system-ui, sans-serif;
     }
-    
-    .no-print {
-      display: none !important;
+
+    /* Print styles */
+    @media print {
+        body {
+            background: white !important;
+        }
+
+        .no-print {
+            display: none !important;
+        }
     }
-  }
 }
 
 @layer components {
-  /* Input field styling */
-  .input-field {
-    @apply w-full px-4 py-3 rounded-xl bg-input border border-border 
+    /* Input field styling */
+    .input-field {
+        @apply w-full px-4 py-3 rounded-xl bg-input border border-border
            focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent
            transition-all duration-200 text-foreground placeholder:text-muted-foreground;
-  }
+    }
 
-  /* Card styling */
-  .card-elevated {
-    @apply bg-card rounded-2xl p-6 border border-border;
-    box-shadow: var(--shadow-card);
-  }
+    /* Card styling */
+    .card-elevated {
+        @apply bg-card rounded-2xl p-6 border border-border;
+        box-shadow: var(--shadow-card);
+    }
 
-  /* Split item row */
-  .split-row {
-    @apply flex items-center justify-between py-4 border-b border-border last:border-0;
-  }
+    /* Split item row */
+    .split-row {
+        @apply flex items-center justify-between py-4 border-b border-border last:border-0;
+    }
 
-  /* Amount display */
-  .amount-display {
-    @apply text-2xl font-semibold text-foreground tabular-nums;
-  }
+    /* Amount display */
+    .amount-display {
+        @apply text-2xl font-semibold text-foreground tabular-nums;
+    }
 
-  /* Subtle divider */
-  .divider {
-    @apply h-px bg-border my-4;
-  }
+    /* Subtle divider */
+    .divider {
+        @apply h-px bg-border my-4;
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
